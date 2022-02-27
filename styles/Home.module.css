@@ -1,0 +1,186 @@
+.main {
+  height: 500px;
+  padding: 15px;
+  position: relative;
+  width: 350px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px #515C6F;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.ul {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 20px;
+  outline: none;
+  border: none;
+  list-style: none;
+  overflow: hidden;
+  overflow-x: scroll;
+  width: 100%;
+  height: 420px;
+}
+.li {
+  height: 280px;
+  margin-top: 8px;
+  min-width: 270px;
+  border-radius: 7px;
+  background: inherit;
+  box-shadow: 0px 6px 15px #515C6F;
+}
+.contenar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  flex-direction: column;
+}
+.imgBx {
+  position: relative;
+  overflow: hidden;
+  height: 150px;
+  width: 150px;
+  margin: 15px auto;
+  border-radius: 50%;
+  border: 5px solid #dbdbdbb7;
+}
+.timer {
+  user-select: none;
+  cursor: none;
+  width: 100%;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #515c6fde;
+  font-weight: 300;
+}
+.progressDiv {
+  position: relative;
+  height: 8px;
+  width: 250px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.progressBar {
+  background: #8eecff;
+  background: #d4d4d4d8;
+  height: inherit;
+  overflow: hidden;
+  margin-top: -15px;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  position: relative;
+  border-radius: inherit;
+}
+.progressBar::-webkit-slider-thumb {
+  appearance: none;
+  height: 12px;
+  width: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  background: #000;
+  box-shadow: -120px 0px 1px 120px #000;
+}
+.controller {
+  margin: 14px 0px;
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.controller svg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: scale(1.5);
+  box-shadow: 0 2px 5px #515C6F;
+  border-radius: 50%;
+  transform: scale(2);
+  padding: 4px;
+  transition: fill .5s,background .5s;
+}
+.controller svg:hover {
+  fill: #ff2bb7df;
+  background: #000;
+}
+.descriptions {
+  margin-top: -30px;
+  text-align: center;
+  width: 100%;
+}
+.title {
+  font-size: 26px;
+  letter-spacing: 2px;
+  opacity: .95;
+  color: #000;
+  margin-bottom: 8px;
+}
+.artist {
+  font-size: 18px;
+  letter-spacing: 2px;
+  opacity: .65;
+  font-weight: lighter;
+  color: #515C6F;
+  margin-bottom: 8px;
+}
+.controllerDiv {
+  margin-top: 15px;
+}
+.playing {
+  animation: 20s linear infinite hue;
+  background: radial-gradient(#8cb5c9e6,#ff5affe0);
+}
+@keyframes hue {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.playing .artist {
+  color: #fff;
+}
+.rotate {
+  animation: 3s linear infinite animate;
+}
+@keyframes animate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.valueScrall {
+  background: #d4d4d4d8;
+  overflow: hidden;
+  appearance: none;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  right: 7px;
+  right: -30%;
+  z-index: 4;
+  bottom: 125px;
+  position: absolute;
+  transform: rotate(-90deg);
+  border-radius: 50px;
+  transition: right .5s;
+}
+.valueScrall.active {
+  right: 7px;
+}
+.valueScrall::-webkit-slider-thumb {
+  background: #d4d4d4d8;
+  appearance: none;
+  background: #8eecff;
+  width: 10px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 4;
+  box-shadow: -70px 0px 0px 70px #8eecff;
+}

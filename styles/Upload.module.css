@@ -1,0 +1,173 @@
+
+.one {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  bottom: -50px;
+  right: 8px;
+  background: pink;
+  pointer-events: none;
+  filter: blur(115px);
+  animation: 15s linear infinite bg;
+}
+.two {
+  position: absolute;
+  animation: 15s linear infinite bg;
+  height: 150px;
+  width: 150px;
+  bottom: 170px;
+  right: 75px;
+  filter: blur(115px);
+  background: green;
+  pointer-events: none;
+}
+.three {
+  filter: blur(115px);
+  animation: 15s linear infinite bg;
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  top: -50px;
+  left: 8px;
+  background: blue;
+  pointer-events: none;
+}
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(95px);
+  align-items: center;
+}
+.login-from {
+  padding: 18px;
+  width: 80%;
+  border-radius: 8px;
+  backdrop-filter: blur(45px);
+  box-shadow: 2px 2px 34px #000;
+}
+.login-from h3 {
+  font-size: 1.5em;
+  position: relative;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.login-from h3::before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  height: 3px;
+  border-radius: 12px;
+  width: 90px;
+  bottom: -8px;
+}
+.login-from .input-div {
+  width: 100%;
+  margin-top: 5px;
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 2px 2px 4px #000,
+  inset 2px 2px 2px #000;
+}
+.login-from .input-div.file {
+  padding: 8px;
+}
+.login-from .input-div.sub {
+  box-shadow: 2px 2px 4px #000,
+  2px 2px 2px #000;
+}
+.login-from .input-div input {
+  width: 100%;
+  font-size: 20px;
+  padding: 5px;
+  border: none;
+  color: #fff;
+  outline: none;
+  background: transparent;
+}
+.login-from .input-div input::placeholder {
+  color: #fff;
+}
+.login-from .input-div input[type="submit"] {
+  font-weight: 800;
+  background: #fff;
+  color: #000;
+}
+.forget {
+  margin-top: 8px;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 700;
+}
+.forget a {
+  color: #dff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.card {
+  position: absolute;
+  z-index: 200;
+  border-radius: 8px;
+  animation: 5s linear infinite animate;
+}
+@keyframes animate {
+  0%,100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes bg {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.c1 {
+  height: 80px;
+  width: 80px;
+  top: -70px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.c2 {
+  height: 80px;
+  width: 120px;
+  top: -50px;
+  right: 8px;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid rgba(255,255,255,.3);
+}
+.c3 {
+  height: 60px;
+  width: 40px;
+  bottom: -20px;
+  right: 8px;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid rgba(255,255,255,.3);
+}
+.errors {
+  position: absolute;
+  top: calc(100% + 5px);
+  background: rgba(255,255,255,.5);
+  left: 0;
+  border-radius: 8px;
+  padding: 4px;
+  width: 100%;
+}
+.error {
+  background: rgba(255,255,255,.5);
+  left: 0;
+  border-radius: 8px;
+  padding: 8px;
+  width: 100%;
+}
